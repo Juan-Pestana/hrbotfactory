@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `hr bot factory - inteligencia artificial aplicada a recursos humanos`,
+    description: `Bla bla bla bla hr bot factory mola mucho bla bla.`,
+    author: `@juandev`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-anchor-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
