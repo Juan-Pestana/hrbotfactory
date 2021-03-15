@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { Link } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 
 import {BiMenu} from "react-icons/bi"
@@ -27,6 +28,63 @@ const Navig = styled.div`
   .imgBlue{
     display: none;
   }
+
+  .services {
+      background-color: transparent;
+      color: white;
+      /* padding: 12px; */
+      width: 155px;
+      border: none;
+      font-size: 16px;
+      outline: none;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 2px;
+
+      .option{
+        background-color: #6698ff;
+        color: white;
+        height: 50px;
+        width: auto;
+        border: none;
+        font-size: 16px;
+        outline: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 2px;
+
+      }
+    }
+
+
+    /* :before {
+      content: "";
+
+      position: absolute;  
+
+      -webkit-appearance: button;
+      appearance: button;
+      top: 0;
+      right: 0;
+      width: 20%;
+      height: 100%;
+      text-align: center;
+      font-size: 28px;
+      line-height: 45px;
+      color: rgba(255, 255, 255, 0.5);
+    
+      pointer-events: none;
+    }
+
+    :hover::before {
+      color: rgba(255, 255, 255, 0.6);
+      background-color: rgba(255, 255, 255, 0.2);
+    } */
+
   .box {
   position: absolute;
   top: 50%;
@@ -192,6 +250,38 @@ const DarkBg = styled.div`
     display: ${props=> props.isOpen ? 'block': 'none'};
 `;
 
+const Social =styled.div`
+    width: 100%;
+    display:flex;
+    padding: 0px;
+    justify-content: flex-end;
+    margin: 0px;
+    position: relative;
+    height: 40px;
+    background-color: #6698ff;
+
+    ul{
+      display: flex;
+      color: #ffff;
+      margin-right: 60px;
+      width: 150px;
+      justify-content: space-between
+      
+    }
+    
+    @media (max-width: 1200px){
+    background-color: #fff;
+    ul{
+      color: #6698ff 
+    }
+
+    
+
+  }
+
+
+`;
+
 const Header = ({ siteTitle, logos }) => {
 
   const [lang, setLang] = useState('es')
@@ -207,6 +297,14 @@ const Header = ({ siteTitle, logos }) => {
 
   return(
     <>
+    <Social >
+      <ul >
+        <li><a href="#" target='_blank'><FaFacebookF /></a></li>
+        <li><a href="#" target='_blank'><FaTwitter/></a></li>
+        <li><a href="#" target='_blank'><FaInstagram/></a></li>
+        <li><a href="#" target='_blank'><FaLinkedinIn/></a></li>
+      </ul>
+    </Social>
   <header className='section navBar' >
     <div className='container'>
       <Navig>
@@ -222,16 +320,27 @@ const Header = ({ siteTitle, logos }) => {
           
         </div>
         <ul className= "desktop-nav">
-          <li><AnchorLink to="/#products" title='productos'><span>soluciones</span></AnchorLink> </li>
+          <li>
+            <select className='services' >
+              <option className='option'> 
+                <a href='/smartrecruitment'  />asdfa
+              </option>
+                
+                
+                <option className='option' value='en'>Linea de empleado</option>
+              </select>
+          </li>
           <li><AnchorLink to="/#nosotros" title='nosotros'><span>nosotros</span></AnchorLink> </li>
           <li><Link to='/contact'>solicita una demo</Link>  </li>
           <li>acceso a clientes</li>
-          <li style={{position: 'relative'}}><div className="box">
+          <li style={{position: 'relative'}}>
+            <div className="box">
               <select value={lang} onChange={handleChange}>
                 <option value= 'es'>🇪🇸  </option>
                 <option value='en'>🇬🇧 </option>
               </select>
-            </div></li>
+            </div>
+          </li>
         </ul>
         <div className='mobile-menu' onClick={toggleSideMenu}>
             <BiMenu/>

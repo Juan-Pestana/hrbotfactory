@@ -6,6 +6,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from '../components/Footer'
+import GoTop from '../components/ui/GoTop'
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -30,7 +31,7 @@ const Layout = ({ children }) => {
   `)
 
   const logos = [...data.logos.nodes]
-  console.log(logos);
+
 
   return (
     <>
@@ -44,6 +45,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <Footer logos={logos}/>
+        <GoTop scrollStepInPx="100" delayInMs="10.50" />
           
         
       </div>

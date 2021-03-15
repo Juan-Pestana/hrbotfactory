@@ -42,6 +42,7 @@ const ProductTabs = styled.div`
 
     .tabs{
         display: flex;
+        flex-wrap: wrap;
         list-style: none;
         width: 100%;
         margin: 0;
@@ -50,7 +51,8 @@ const ProductTabs = styled.div`
     }
     .tab{
         text-align: center;
-        width: 100%;
+        flex: 1 1 25%;
+        min-width: 180px;
         text-transform: uppercase;
         font-size: 10pt;
         border: none;
@@ -110,8 +112,14 @@ const ProductTabs = styled.div`
 
 const Products = () => {
 
-    const [show, setShow] = useState('onboarding')
+    const [show, setShow] = useState(1)
+  
+
+
+  
+
     
+
 
 
     return (
@@ -120,13 +128,13 @@ const Products = () => {
             <div className= 'container'>
                 <ProductTabs>
                     <ul className= 'tabs'>
-                        <button className="tab" onClick={()=>setShow('onboarding')} style={show === "onboarding" ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null}>onboarding  </button>
-                        <button className="tab" onClick={()=>setShow('linea de empleado')} style={show === "linea de empleado" ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null}>linea de emplead</button>
-                        <button className="tab" onClick={()=>setShow('feedback')} style={show === "feedback" ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null}>feedback</button>
-                        <button className="tab" onClick={()=>setShow('exit interview')} style={show === "exit interview" ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null}>exit interview</button>     
+                        <button className="tab" onClick={()=>setShow(1)} style={show === 1 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null}>onboarding  </button>
+                        <button className="tab" onClick={()=>setShow(2)} style={show === 2 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null}>linea de emplead</button>
+                        <button className="tab" onClick={()=>setShow(3)} style={show === 3 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null}>feedback</button>
+                        <button className="tab" onClick={()=>setShow(4)} style={show === 4 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null}>exit interview</button>     
                     </ul>
-                    <div className="slideContainer">
-                    <div className={`product ${show === "onboarding" ? 'selected' : null}`} >
+                    <div className="slideContainer" >
+                    <div className={`product ${show === 1 ? 'selected' : null}`} >
                         <div className= 'textContainer'>
                             <p className= 'preHeading'>
                                 onboarding
@@ -143,7 +151,7 @@ const Products = () => {
                             <Button marginl= {true}>Solicita una demo</Button>
                         </div>
                     </div>
-                    <div className={`product ${show === "linea de empleado" ? 'selected' : null}`} >
+                    <div className={`product ${show === 2 ? 'selected' : null}`} >
                         <div className= 'textContainer'>
                             <p className= 'preHeading'>
                             LÍNEA DE EMPLEADO
@@ -160,7 +168,7 @@ const Products = () => {
                             <Button marginl= {true}>Solicita una demo</Button>
                         </div>
                     </div>
-                    <div className={`product ${show === "feedback" ? 'selected' : null}`}>
+                    <div className={`product ${show === 3 ? 'selected' : null}`}>
                         <div className= 'textContainer'>
                             <p className= 'preHeading'>
                             FEEDBACK
@@ -177,7 +185,7 @@ const Products = () => {
                             <Button marginl={true}>Solicita una demo</Button>
                         </div>
                     </div>
-                    <div className={`product ${show === "exit interview" ? 'selected' : null}`}>
+                    <div className={`product ${show === 4 ? 'selected' : null}`}>
                         <div className= 'textContainer'>
                             <p className= 'preHeading'>
                             EXIT INTERVIEWS
