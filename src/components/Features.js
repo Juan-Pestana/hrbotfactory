@@ -106,7 +106,7 @@ const Features = () => {
                     <div className='imageContainer'>
                         <Img fluid={images[3].childImageSharp.fluid}/>
                         <div className= 'innerImage'>
-                        <Img fluid={images[show].childImageSharp.fluid} />
+                        <Img fluid={images[1].childImageSharp.fluid} />
                         </div>
                         
                         

@@ -90,6 +90,13 @@ a{
   letter-spacing: 0.4em !important;
   color: #4D4D4D;
 }
+.dblock{
+  display: block;
+}
+
+.dnone{
+  display: none;
+}
 
 /* divider */
 

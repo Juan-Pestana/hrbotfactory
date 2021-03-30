@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `hr bot factory - inteligencia artificial aplicada a recursos humanos`,
-    description: `Bla bla bla bla hr bot factory mola mucho bla bla.`,
+    description: `Optimización de procesos de Recursos Humanos mediante asistentes virtuales e inteligencia artificial`,
     author: `@juandev`,
   },
   plugins: [
@@ -26,7 +26,19 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/hrbot-favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Default to 100
+        //   contentTypes : `jobs`, `projects`, `blogs`,
+        //   singleType : `about`
+        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
+        contentTypes: [`blogs`],
+       
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

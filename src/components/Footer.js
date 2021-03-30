@@ -68,10 +68,10 @@ const Footer = ({logos}) => {
                         </div>
                         <p>Todos los derechos reservados hr bot factory.</p>
                         <ul >
-                            <li><a href="#" target='_blank'><FaFacebookF /></a></li>
-                            <li><a href="#" target='_blank'><FaTwitter/></a></li>
-                            <li><a href="#" target='_blank'><FaInstagram/></a></li>
-                            <li><a href="#" target='_blank'><FaLinkedinIn/></a></li>
+                            <li><a href="https://www.facebook.com/hrbotfactory" target='_blank'><FaFacebookF /></a></li>
+                            <li><a href="https://twitter.com/hrbotfactory" target='_blank'><FaTwitter/></a></li>
+                            <li><a href="https://www.instagram.com/hrbotfactory/" target='_blank'><FaInstagram/></a></li>
+                            <li><a href="https://www.linkedin.com/company/hr-bot-factory/" target='_blank'><FaLinkedinIn/></a></li>
                         </ul>
                     </FooterStyle>
                     <div style={{paddingBottom: '1rem'}}>
@@ -80,14 +80,14 @@ const Footer = ({logos}) => {
 
                 </div>
             </div>
-            <div className='section' style={{backgroundColor:'#fff'}}>
+            {/* <div className='section' style={{backgroundColor:'#fff'}}>
                 <ul style={{display: 'flex'}}>
                     <li style={{margin: '1rem'}}><span role='img' aria-label='spanish flag'>🇪🇸</span>Español</li>
                     <li style={{margin: '1rem'}}><span role='img' aria-label='spanish flag'>🇬🇧 </span>English</li>
                 </ul>
                 
                 
-            </div>
+            </div> */}
             
         </footer>
     )

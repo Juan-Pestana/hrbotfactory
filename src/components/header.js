@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import Dropdown from './ui/Dropdown'
 import { Link } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
@@ -29,61 +30,9 @@ const Navig = styled.div`
     display: none;
   }
 
-  .services {
-      background-color: transparent;
-      color: white;
-      /* padding: 12px; */
-      width: 155px;
-      border: none;
-      font-size: 16px;
-      outline: none;
-      color: #fff;
-      text-transform: uppercase;
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: 2px;
-
-      .option{
-        background-color: #6698ff;
-        color: white;
-        height: 50px;
-        width: auto;
-        border: none;
-        font-size: 16px;
-        outline: none;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 2px;
-
-      }
-    }
 
 
-    /* :before {
-      content: "";
 
-      position: absolute;  
-
-      -webkit-appearance: button;
-      appearance: button;
-      top: 0;
-      right: 0;
-      width: 20%;
-      height: 100%;
-      text-align: center;
-      font-size: 28px;
-      line-height: 45px;
-      color: rgba(255, 255, 255, 0.5);
-    
-      pointer-events: none;
-    }
-
-    :hover::before {
-      color: rgba(255, 255, 255, 0.6);
-      background-color: rgba(255, 255, 255, 0.2);
-    } */
 
   .box {
   position: absolute;
@@ -164,7 +113,7 @@ const Navig = styled.div`
     font-weight: 500;
     letter-spacing: 2px;
 
-  }
+  } 
 
 
 
@@ -259,6 +208,7 @@ const Social =styled.div`
     position: relative;
     height: 40px;
     background-color: #6698ff;
+   
 
     ul{
       display: flex;
@@ -271,9 +221,11 @@ const Social =styled.div`
     
     @media (max-width: 1200px){
     background-color: #fff;
+    height: fit-content;
     ul{
       color: #6698ff 
     }
+    
 
     
 
@@ -298,11 +250,12 @@ const Header = ({ siteTitle, logos }) => {
   return(
     <>
     <Social >
+      
       <ul >
-        <li><a href="#" target='_blank'><FaFacebookF /></a></li>
-        <li><a href="#" target='_blank'><FaTwitter/></a></li>
-        <li><a href="#" target='_blank'><FaInstagram/></a></li>
-        <li><a href="#" target='_blank'><FaLinkedinIn/></a></li>
+        <li><a href="https://www.facebook.com/hrbotfactory" target='_blank'><FaFacebookF /></a></li>
+        <li><a href="https://twitter.com/hrbotfactory" target='_blank'><FaTwitter/></a></li>
+        <li><a href="https://www.instagram.com/hrbotfactory/" target='_blank'><FaInstagram/></a></li>
+        <li><a href="https://www.linkedin.com/company/hr-bot-factory/" target='_blank'><FaLinkedinIn/></a></li>
       </ul>
     </Social>
   <header className='section navBar' >
@@ -321,25 +274,18 @@ const Header = ({ siteTitle, logos }) => {
         </div>
         <ul className= "desktop-nav">
           <li>
-            <select className='services' >
-              <option className='option'> 
-                <a href='/smartrecruitment'  />asdfa
-              </option>
-                
-                
-                <option className='option' value='en'>Linea de empleado</option>
-              </select>
+            <AnchorLink to="/#products" title='nosotros'><span>soluciones</span></AnchorLink> 
           </li>
           <li><AnchorLink to="/#nosotros" title='nosotros'><span>nosotros</span></AnchorLink> </li>
           <li><Link to='/contact'>solicita una demo</Link>  </li>
-          <li>acceso a clientes</li>
+          <li><a href="https://platform.hrbotfactory.com/" target='_blank'>acceso a clientes</a></li>
           <li style={{position: 'relative'}}>
-            <div className="box">
+            {/* <div className="box">
               <select value={lang} onChange={handleChange}>
                 <option value= 'es'>🇪🇸  </option>
                 <option value='en'>🇬🇧 </option>
               </select>
-            </div>
+            </div> */}
           </li>
         </ul>
         <div className='mobile-menu' onClick={toggleSideMenu}>
@@ -357,13 +303,14 @@ const Header = ({ siteTitle, logos }) => {
         <AnchorLink to="/#nosotros" title='nosotros'><li onClick={toggleSideMenu}>nosotros </li></AnchorLink>
         <Link to='/contact'><li onClick={toggleSideMenu}>solicita una demo</li></Link>
         <li onClick={toggleSideMenu}>acceso a clientes</li>
+        {/* <li><Dropdown/></li> */}
 
       </ul>
-      <div className='lang-select'>
+      {/* <div className='lang-select'>
         <div><span role='img' aria-label='spanish flag'>🇪🇸</span></div>
         <div><span role='img' aria-label='spanish flag'>🇬🇧 </span></div>
           
-      </div>
+      </div> */}
                     
       
     </SideMenu>

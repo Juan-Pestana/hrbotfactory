@@ -18,6 +18,14 @@ export const Button = styled.button`
     cursor: pointer;
     margin-left: ${props=> props.marginl ? '130px' : '0'};
     border: none;
+    transition: all 0.3s ease-in;
+
+    :hover{
+        background-color: ${props => props.secondary? '#ffff' : '#175fff;'};
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        
+    }
 
     @media(max-width: 800px){
         margin-left: 0;

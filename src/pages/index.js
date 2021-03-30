@@ -1,5 +1,5 @@
-import React, { useRef } from "react"
-import { Link } from "gatsby"
+import React from "react"
+
 
 import Layout from "../components/layout"
 
@@ -7,9 +7,9 @@ import SEO from "../components/seo"
 import HeadingGirl from "../components/HeadingGirl"
 import SliderSection from '../components/SliderSection'
 import HowItWorks from '../components/HowItWorks'
-
+import Features from '../components/Features'
 import Metrics from '../components/Metrics'
-
+import Engagement from '../components/Engagement'
 import Sass from '../components/Sass'
 import Products from '../components/Products'
 import Mision from '../components/Mision'
@@ -25,14 +25,14 @@ const IndexPage = () =>{
   <Layout>
     <SEO title="hr bot factory" />
     <HeadingGirl/>
-    <Products/>
+    
     <SliderSection/>
     <HowItWorks/>
-    
+    <Engagement/>
     <Metrics/>
-    
+    <Features/>
     <Sass/>
-   
+    <Products/>
     <Mision />
     <Ending/>
 
