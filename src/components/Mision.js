@@ -145,7 +145,7 @@ const images = [...data.jefes.nodes]
 const linkedin = data.linkedin
 const team = data.team
 
-console.log(team)
+
 
 
     return (

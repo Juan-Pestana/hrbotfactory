@@ -31,7 +31,7 @@ const Metrics = () => {
                         <CountUp  end={98}  suffix='%' delay={0}>
                         {({ countUpRef, start }) => (
                             <VisibilitySensor onChange={start} delayedCall>
-                                <span style={{fontSize:'66px', lineHeight: '1em', marginTop: '15px', marginBottom: '0px'}} ref={countUpRef} />
+                                <span style={{fontSize:'50px', lineHeight: '1em', marginTop: '15px', marginBottom: '0px'}} ref={countUpRef} />
                             </VisibilitySensor>
         )}
                         </CountUp>
@@ -42,7 +42,7 @@ const Metrics = () => {
                         <CountUp  end={81}  suffix='%' delay={.5}>
                         {({ countUpRef, start }) => (
                             <VisibilitySensor onChange={start} delayedCall>
-                                <span style={{fontSize:'66px', lineHeight: '1em', marginTop: '15px', marginBottom: '0px'}} ref={countUpRef} />
+                                <span style={{fontSize:'50px', lineHeight: '1em', marginTop: '15px', marginBottom: '0px'}} ref={countUpRef} />
                             </VisibilitySensor>
         )}
                         </CountUp>
@@ -53,7 +53,7 @@ const Metrics = () => {
                         <CountUp  end={54}  suffix='%' delay={1}>
                         {({ countUpRef, start }) => (
                             <VisibilitySensor onChange={start} delayedCall>
-                                <span style={{fontSize:'66px', lineHeight: '1em', marginTop: '15px', marginBottom: '0px'}} ref={countUpRef} />
+                                <span style={{fontSize:'50px', lineHeight: '1em', marginTop: '15px', marginBottom: '0px'}} ref={countUpRef} />
                             </VisibilitySensor>
         )}
                         </CountUp>
@@ -64,7 +64,7 @@ const Metrics = () => {
                         <CountUp  end={35}  suffix='%' delay={1.5}>
                         {({ countUpRef, start }) => (
                             <VisibilitySensor onChange={start} delayedCall>
-                                <span style={{fontSize:'66px', lineHeight: '1em', marginTop: '15px', marginBottom: '0px'}} ref={countUpRef} />
+                                <span style={{fontSize:'50px', lineHeight: '1em', marginTop: '15px', marginBottom: '0px'}} ref={countUpRef} />
                             </VisibilitySensor>
         )}
                         </CountUp>

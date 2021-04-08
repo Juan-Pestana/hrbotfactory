@@ -4,18 +4,28 @@ import styled from 'styled-components'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import {useStaticQuery} from 'gatsby'
+import Img from 'gatsby-image'
 
 const ContactForm = styled.div`
 
+display:flex;
+align-items: center;
+justify-content: space-between;
+
+.image-container{
+  width: 50%;
+  padding: 4rem;
+}
   
 .contact-form {
   background: #ffff;
   border-radius: 0.25rem;
-  text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s linear;
   width: 90vw;
-  max-width: 35rem;
+  max-width: 30rem;
+  margin-right: 3rem;
 
 }
 .contact-form:hover {
@@ -86,31 +96,64 @@ const ContactForm = styled.div`
 
 `;
 
-const Contact = () => (
-  <Layout>
-    <SEO title='Contacta con nosotros'/>
+const Contact = () => {
+
+  const data = useStaticQuery(graphql`
+  query {
+      image: file(relativePath: { eq: "contact.png" }) {
+            childImageSharp {
+            fluid(maxWidth: 750) {
+              ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }`
+)
+
+const image= data.image
+
+  return(
+    <Layout>
+    <SEO title='Blog hr bot factory'/>
     <div className='section' style={{margin: '50px 0 50px 0'}}>
-      <ContactForm >
-        <article className="contact-form">
-            <h3>Solicita una demo</h3>
-            <form action="https://formspree.io/f/xqkwzvea" method="POST">
-              <div className="form-group">
-                <div className='flex'>
-                  <input type="text" name='Nombre' placeholder='Nombre' className='form-control' />
-                  <input type="text" name='Teléfono' placeholder='Teléfono' className='form-control' />
-                </div>
+      <div className="container" style={{textAlign: 'center'}}>
+        <div style={{color: '#4d4d4d', maxWidth: '600px', margin:'auto'}}>
+          <p className='preHeading'>Quieres saber más</p>
+          <h1 >Solicita una demo y descubre en todo lo que te podemos ayudar</h1>
+        </div>
+        
+        <ContactForm >
+          <div className='image-container'>
+            <Img fluid={image.childImageSharp.fluid}/>
+          </div>
+        
+            <article className="contact-form">
                 
-                <input type="email" name='email' placeholder='Email' className='form-control'/>
-                <input type="text" name='empresa' placeholder='Empresa' className='form-control'/>
-                <textarea name='message' rows='5' placeholder='Mensaje' className='form-control'></textarea>
-              </div>
-              <button type='submit' className='submit-btn btn'>Enviar</button>
-            </form>
-          </article>
+                <form action="https://formspree.io/f/xqkwzvea" method="POST">
+                  <div className="form-group">
+                    <div className='flex'>
+                      <input type="text" name='Nombre' placeholder='Nombre' className='form-control' />
+                      <input type="text" name='Teléfono' placeholder='Teléfono' className='form-control' />
+                    </div>
+                    
+                    <input type="email" name='email' placeholder='Email' className='form-control'/>
+                    <input type="text" name='empresa' placeholder='Empresa' className='form-control'/>
+                    <textarea name='message' rows='5' placeholder='Mensaje' className='form-control'></textarea>
+                  </div>
+                  <button type='submit' className='submit-btn btn'>Enviar</button>
+                </form>
+              </article>
     
       </ContactForm>
+
+      </div>
+  
+     
     </div>
   </Layout>
-)
+
+  )
+  
+}
 
 export default Contact

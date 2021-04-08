@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Button} from './ui/Button'
+import { Link, Trans} from 'gatsby-plugin-react-i18next'
 
 const HeadGirl = styled.div`
     display: flex;
@@ -47,16 +48,16 @@ const HeadingGirl = () => {
                 <HeadGirl>
                     <div className= 'textContainer'>
                         <p className= 'preHeading'>
-                            revoluciona tu reclutamiento
+                            <Trans>revoluciona tu reclutamiento</Trans>
                         </p>
                         <h1>
-                            Todo tu proceso de selección online gracias a nuestros chatbots y videoentrevistas
+                            <Trans>Todo tu proceso de selección online gracias a nuestros chatbots y videoentrevistas</Trans>
                         </h1>
                         <p>
-                        Mejora la experiencia del candidato incorporando un asistente virtual que entreviste y evalúe a los candidatos con el mismo rigor.
+                            <Trans>Mejora la experiencia del candidato incorporando un asistente virtual que entreviste y evalúe a los candidatos con el mismo rigor.</Trans>
                         </p>
                         <p>
-                        Planifica tus vídeo entrevistas online o asíncronas gracias a nuestra plataforma y deja que nuestros chatbots den feedback a tus candidatos.
+                            <Trans>Planifica tus vídeo entrevistas online o asíncronas gracias a nuestra plataforma y deja que nuestros chatbots den feedback a tus candidatos.</Trans>
                         </p>
                         <Button marginl={true}>Solicita una demo</Button>
                     </div>

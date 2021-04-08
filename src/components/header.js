@@ -1,8 +1,10 @@
 import React, {useState} from "react"
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import {graphql} from 'gatsby'
+import {useTranslation, useI18next, Link, Trans} from 'gatsby-plugin-react-i18next'
 import Dropdown from './ui/Dropdown'
-import { Link } from "gatsby"
+//import { Link } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
@@ -119,7 +121,7 @@ const Navig = styled.div`
 
 
 
-  @media (max-width: 1200px){
+  @media (max-width: 800px){
     justify-content: center;
 
     .imgWhite{
@@ -219,7 +221,7 @@ const Social =styled.div`
       
     }
     
-    @media (max-width: 1200px){
+    @media (max-width: 800px){
     background-color: #fff;
     height: fit-content;
     ul{
@@ -236,17 +238,21 @@ const Social =styled.div`
 
 const Header = ({ siteTitle, logos }) => {
 
-  const [lang, setLang] = useState('es')
+ 
   const [isOpen, setIsOpen] =useState(false)
+  const { t } = useTranslation()
+  const {changeLanguage, language, languages} = useI18next()
 
   const handleChange = e =>{
-    setLang(e.target.value)
+  
+    changeLanguage(e.target.value)
   }
 
   const toggleSideMenu = () =>{
     setIsOpen(!isOpen)
   }
 
+  
   return(
     <>
     <Social >
@@ -274,18 +280,20 @@ const Header = ({ siteTitle, logos }) => {
         </div>
         <ul className= "desktop-nav">
           <li>
-            <AnchorLink to="/#products" title='nosotros'><span>soluciones</span></AnchorLink> 
+            <Link to="/#products" ><span>{t("soluciones")}</span></Link> 
           </li>
-          <li><AnchorLink to="/#nosotros" title='nosotros'><span>nosotros</span></AnchorLink> </li>
-          <li><Link to='/contact'>solicita una demo</Link>  </li>
-          <li><a href="https://platform.hrbotfactory.com/" target='_blank'>acceso a clientes</a></li>
+          <li><Link to="/#nosotros" ><span>{t("nosotros")}</span></Link> </li>
+          <li><Link to='/contact'>{t("solicita una demo")}</Link>  </li>
+          <li><a href="https://platform.hrbotfactory.com/" target='_blank'> <Trans>acceso a clientes</Trans> </a></li>
+          <Link to='/blog'><li onClick={toggleSideMenu}>Blog</li></Link>
+          
           <li style={{position: 'relative'}}>
-            {/* <div className="box">
-              <select value={lang} onChange={handleChange}>
+            <div className="box">
+              <select value={language} onChange={handleChange}>
                 <option value= 'es'>🇪🇸  </option>
                 <option value='en'>🇬🇧 </option>
               </select>
-            </div> */}
+            </div> 
           </li>
         </ul>
         <div className='mobile-menu' onClick={toggleSideMenu}>
@@ -299,18 +307,49 @@ const Header = ({ siteTitle, logos }) => {
     </div>
     <SideMenu style={isOpen ? {transform: 'translatex(250px)'} : null}>
       <ul>
-        <AnchorLink to="/#products" title='productos'><li onClick={toggleSideMenu}>soluciones </li></AnchorLink>
-        <AnchorLink to="/#nosotros" title='nosotros'><li onClick={toggleSideMenu}>nosotros </li></AnchorLink>
-        <Link to='/contact'><li onClick={toggleSideMenu}>solicita una demo</li></Link>
-        <li onClick={toggleSideMenu}>acceso a clientes</li>
+        <Link to="/#products" title='productos'><li onClick={toggleSideMenu}><Trans>soluciones</Trans> </li></Link>
+        <Link to="/#nosotros" title='nosotros'><li onClick={toggleSideMenu}><Trans>nosotros</Trans> </li></Link>
+        <Link to='/contact'><li onClick={toggleSideMenu}><Trans>solicita una demo</Trans></li></Link>
+        <Link to='/blog'><li onClick={toggleSideMenu}>Blog</li></Link>
+        <a href="https://platform.hrbotfactory.com/" target='_blank' ></a><li onClick={toggleSideMenu}><Trans>acceso a clientes</Trans></li>
         {/* <li><Dropdown/></li> */}
 
       </ul>
-      {/* <div className='lang-select'>
-        <div><span role='img' aria-label='spanish flag'>🇪🇸</span></div>
-        <div><span role='img' aria-label='spanish flag'>🇬🇧 </span></div>
+
+      
+      <div >
+        {/* <a href='#' value='es' onclick={(e)=>{
+          e.preventDefault()
+          changeLanguage(e.target.value)}  }><span role='img' aria-label='spanish flag'>🇪🇸</span></a>
+        <a href='#' value='en' onclick={(e)=>{
+          e.preventDefault()
+          changeLanguage(e.target.value)}  }><span role='img' aria-label='spanish flag'>🇬🇧 </span></a> */}
+         <ul >
+        
+          <li >
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                changeLanguage('es');
+              }}>
+                <span role='img' aria-label='spanish flag'>🇪🇸</span>
+            </a>
+          </li>
+          <li >
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              changeLanguage('en');
+            }}>
+              <span role='img' aria-label='spanish flag'>🇬🇧 </span>
+          </a>
+        </li>
+        
+      </ul>
           
-      </div> */}
+      </div> 
                     
       
     </SideMenu>
@@ -325,10 +364,19 @@ const Header = ({ siteTitle, logos }) => {
   )
 }
 
+// export const query = graphql`
+//   query($language: String!) {
+//     locales: allLocale(filter: {language: {eq: $language}}) {
+//       edges {
+//         node {
+//           ns
+//           data
+//           language
+//         }
+//       }
+//     }
+//   }
+// `;
 
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
