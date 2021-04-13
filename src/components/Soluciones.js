@@ -11,7 +11,7 @@ import {useStaticQuery} from 'gatsby'
 
 
 const SolutionsTabs = styled.div`
-    margin: 5rem 0;
+    margin: 0rem 0;
     width: 100%;
     .slideContainer{
         position: relative;
@@ -42,7 +42,7 @@ const SolutionsTabs = styled.div`
 
     .textContainer{
  
-        padding: 3rem 2rem;
+        padding: 3rem 0rem;
         color: var(--txt-primary);
         width: 40%
 
@@ -94,16 +94,19 @@ const SolutionsTabs = styled.div`
     @media (max-width: 800px){
 
     .slideContainer{
-        height: 850px;
+        height: 800px;
+        
     }
 
     .imageContainer{
-        width: 100%;
+        width: 50%;
+        height: 100%;
     }
  
 
     .textContainer{
-        width: 100%
+        width: 100%;
+        padding: 2rem 1rem;
         }
 
     }
@@ -163,13 +166,7 @@ const images = [...data.soluciones.nodes]
         <div id="products" className='section' style={{backgroundColor:'#f2f2f2'}}>
             
             <SolutionsTabs>
-                <ul className= 'tabs'>
-                    <button className="tab" onClick={()=>setShow(0)} style={show === 0 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null}>Recruitment  </button>
-                    <button className="tab" onClick={()=>setShow(1)} style={show === 1 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null}>onboarding  </button>
-                    <button className="tab" onClick={()=>setShow(2)} style={show === 2 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null}><Trans>línea de empleado</Trans></button>
-                    <button className="tab" onClick={()=>setShow(3)} style={show === 3 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null}>feedback</button>
-                    <button className="tab" onClick={()=>setShow(4)} style={show === 4 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null}>exit interview</button>     
-                </ul>
+                
                 <div className="slideContainer" >
                     <div className={`product ${show === 0 ? 'selected' : null}`} >
                         <div className= 'textContainer'>
@@ -185,7 +182,10 @@ const images = [...data.soluciones.nodes]
                             <p>
                                 <Trans>Planifica tus vídeo entrevistas online o asíncronas gracias a nuestra plataforma y deja que nuestros chatbots den feedback a tus candidatos.</Trans>
                             </p>
-                            <Button marginl={true}><Trans>solicita una demo</Trans></Button>
+                            <Link to='/recruitment'>
+                                <Button marginl={true}><Trans>solicita una demo</Trans></Button>
+                            </Link>
+                            
                             </div>
                         <div className='imageContainer' style={{transform: `translateX(${offset * 0.2}px)`}}>
                             <Img fluid={images[0].childImageSharp.fluid}/>
@@ -229,7 +229,7 @@ const images = [...data.soluciones.nodes]
                             
                             </p>
                             <p>
-                            <Trans> Gracias al procesamiento de lenguaje natural, el asistente virtual interpreta las preguntas de los empleados proporcionando la respuesta más idónea.</Trans>
+                            <Trans>Gracias al procesamiento de lenguaje natural, el asistente virtual interpreta las preguntas de los empleados proporcionando la respuesta más idónea.</Trans>
                            
                             </p>
                             <Button marginl= {true}><Trans>solicita una demo</Trans></Button>
@@ -284,19 +284,22 @@ const images = [...data.soluciones.nodes]
                             <Img fluid={images[4].childImageSharp.fluid}/>
                         </div>
                     </div>
-            </div>
+                </div>
+                <ul className= 'tabs' >
+                    <button className="tab" onClick={()=>setShow(0)} style={show === 0 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} data-aos="fade-right" data-aos-offset="0" data-aos-delay="1000">Recruitment  </button>
+                    <button className="tab" onClick={()=>setShow(1)} style={show === 1 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} data-aos="fade-right" data-aos-offset="0" data-aos-delay="750">onboarding  </button>
+                    <button className="tab" onClick={()=>setShow(2)} style={show === 2 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} data-aos="fade-right" data-aos-offset="0" data-aos-delay="500"><Trans>línea de empleado</Trans></button>
+                    <button className="tab" onClick={()=>setShow(3)} style={show === 3 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} data-aos="fade-right" data-aos-offset="0" data-aos-delay="250">feedback</button>
+                    <button className="tab" onClick={()=>setShow(4)} style={show === 4 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} data-aos="fade-right" data-aos-offset="0" data-aos-delay="0">exit interview</button>     
+                </ul>
             </SolutionsTabs>
             
             
         
-        <div className="custom-shape-divider-bottom-works">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" className="shape-white"></path>
-            </svg>
-        </div>
+        
         
     </div>
-    <div style={{height: '14px', display: 'block', backgroundColor: '#f2f2f2'}}></div>
+  
         </>
     )
 }

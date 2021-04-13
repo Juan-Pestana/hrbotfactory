@@ -84,7 +84,7 @@ const Features = () => {
 
 
     return (
-        <>
+        
         <div className= 'section' style={{backgroundColor:"#f2f2f2"}}>
             <div className="container" style={{marginTop: '3rem'}}>
                 <h1 style={{margin: 'auto',textAlign:'center', maxWidth: '500px'}}>Nuestros chatbots automatizan todo tu proceso de selección</h1>
@@ -128,16 +128,10 @@ const Features = () => {
                 </FeatComp>
                 
             </div>
-            <div className="custom-shape-divider-bottom-1611955911">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" className="shape-fill"></path>
-                </svg>
-            </div>
         </div>
-        <div style={{height: '14px', display: 'block', backgroundColor: '#f2f2f2'}}>
-
-        </div>
-        </>
+            
+        
+        
     )
 }
 

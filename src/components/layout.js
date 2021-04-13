@@ -8,6 +8,8 @@ import Header from "./header"
 import Footer from '../components/Footer'
 import GoTop from '../components/ui/GoTop'
 import "./layout.css"
+import 'aos/dist/aos.css'
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

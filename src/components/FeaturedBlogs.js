@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Divider, DividerBottom } from './ui/divider'
 
 import {useStaticQuery} from 'gatsby'
 
@@ -29,7 +30,7 @@ const FeaturedBlogs = () => {
 
     const FitBlogs = useStaticQuery(graphql`
     query featBlogs {
-        blogs: allStrapiBlogs(sort: {fields: published, order: DESC}) {
+        blogs: allStrapiBlogs {
         nodes {
             title
             slug
@@ -53,7 +54,8 @@ const FeaturedBlogs = () => {
  const allFitBlogs = [...FitBlogs.blogs.nodes];
 
     return (
-        <section className='section'>
+    <>
+        <section className='section' style={{backgroundColor:'#f2f2f2'}}>
             <div className='container'>
                 <FeatBlogs>
                     <div className='intro'>
@@ -65,8 +67,11 @@ const FeaturedBlogs = () => {
                         {allFitBlogs.map(blog => <BlogCard key={blog.id} blog={blog}/>)}
                     </div>
                 </FeatBlogs>
-            </div>          
+            </div>
+            <Divider color='#ffff' />         
         </section>
+        <DividerBottom color= '#f2f2f2'/>
+    </>
     )
 }
 

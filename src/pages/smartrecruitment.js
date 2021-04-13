@@ -1,27 +1,44 @@
-import React from "react"
+import React, {useEffect} from "react"
 
 import Soluciones from '../components/Soluciones'
-import Soluciones2 from '../components/Soluciones2'
+
 import NewSliderSection from '../components/NewSliderSection'
-import ComoLoHacemos from '../components/ComoLoHacemos'
+import Mision from '../components/Mision'
 import FeaturedBlogs from '../components/FeaturedBlogs'
+import IndexSantander from '../components/IndexSantander'
+import IndexFeatures from '../components/IndexFeatures'
+
+import Aos from 'aos'
 
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Recruitment = () => (
-  <Layout>
-    <SEO title="#smartRecruitment" />
-    <Soluciones/>
-    <Soluciones2/>
-    <NewSliderSection/>
-    <ComoLoHacemos/>
-    <FeaturedBlogs/>
+
+const Recruitment = () => {
+  useEffect(()=>{
+    Aos.init({duration: 2000})
+    },[])
+
+  return(
+    <Layout>
+      <SEO title="#smartRecruitment" />
+      <Soluciones/>
+      <IndexSantander/>
+      <IndexFeatures/>
+      <NewSliderSection/>
+  
+      <FeaturedBlogs/>
+      <Mision/>
+      
     
     
   </Layout>
-)
+
+
+  )
+}
+
 
 export const query = graphql`
 query($language: String!) {

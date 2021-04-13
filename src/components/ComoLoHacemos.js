@@ -2,7 +2,7 @@ import React from 'react'
 
 import howitsWork from '../images/how-its-work.png'
 import styled from 'styled-components'
-import CenterMode from './Slides';
+
 
 const FirstTry = styled.section`
 

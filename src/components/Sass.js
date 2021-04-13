@@ -6,8 +6,8 @@ import Img from 'gatsby-image'
 const SaaS = styled.div`
     display: flex;
     align-items: center;
-    margin-top: 5rem;
-    margin-bottom: 12rem;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
 
 
     .imageContainer{
@@ -128,13 +128,9 @@ const image = data.Saas
                     </div>       
                 </SaaS> 
             </div>
-            <div className="custom-shape-divider-bottom-engage">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" className="shape-gray"></path>
-                </svg>
-            </div>         
+                   
         </div>
-        <div style={{height: '14px', display: 'block', backgroundColor: '#6698ff'}}></div>
+       
         </>
 
         

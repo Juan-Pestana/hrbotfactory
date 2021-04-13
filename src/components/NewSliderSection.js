@@ -25,7 +25,7 @@ const NewSliderSection = () => {
 
 
     return (
-        <div className='section' style={{backgroundColor: "#6698ff", marginTop: '5px', flexDirection:'column'}}>
+        <div className='section' style={{backgroundColor: "#6698ff", flexDirection:'column'}}>
             <div className='container' >
                 <p className="preHeading" style={{color: '#fff', paddingTop: '4rem', textAlign:'center'}}>confian en nosotros</p>
                 <CenterMode data = {data}/>

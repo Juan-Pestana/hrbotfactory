@@ -153,7 +153,7 @@ const team = data.team
         <div id="nosotros" className= 'section'>
             <div className= 'container' style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
             <Mision_wrapper>
-            <div className= 'textContainer'>
+                <div className= 'textContainer'>
                         <p className= 'preHeading'>
                             nuestra misión
                         </p>
@@ -168,9 +168,9 @@ const team = data.team
                             Hacemos que los procesos sean más fáciles para así poner a las personas en el centro de la toma de decisiones.
                         </p>
                        
-                    </div>
+                </div>
 
-                    <div className= 'card-container'>
+                <div className= 'card-container'>
                         
                         <div className="card">
                             <div style={{width: '100%'}}>
@@ -195,7 +195,7 @@ const team = data.team
                             
                         </div>
                         <div className="card">
-                        <div style={{width: '100%'}}>
+                            <div style={{width: '100%'}}>
                                 <Img fluid={images[1].childImageSharp.fluid} style={{minWidth: '60px'}}/>
                             </div>
                             <div className="card-content">
@@ -205,7 +205,7 @@ const team = data.team
                                         <Img  fixed={linkedin.childImageSharp.fixed} style={{marginTop:'10px'}}/>  
                                     </a>                        
                                                            
-                                </div>
+                            </div>
                                 <p className="preHeading" style={{marginLeft: '10px'}}>CCO & COFOUNDER</p>
                                 <p className='card-text'>Experto en RRHH en las disciplinas de Desarrollo y Atracción de talento. Tiene un amplio bagage profesional en compañías como VIPS, TENDAM y JTI.</p>
                                 <a href="#">
@@ -222,25 +222,14 @@ const team = data.team
             </Mision_wrapper>
                 <ImageTeam>
                     <Img fluid={team.childImageSharp.fluid} />
-                    {/* style ={{marginLeft: '-90%'}} */}
+                    
                 </ImageTeam>  
 
             </div> 
-            
-
-                
-            
-            
-            <div className="custom-shape-divider-bottom-1611955911">
-                
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" className="shape-fill"></path>
-                </svg>
-            </div>         
+                         
         </div>
-        <div style={{height: '14px', display: 'block', backgroundColor: '#fff'}}>
-
-        </div>
+        <div style={{backgroundColor:'#6698ff', height: '100px'}}></div>
+        
 
         </>
         

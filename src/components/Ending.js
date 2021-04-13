@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Button} from '../components/ui/Button'
+import RecrMetrics from '../components/RecrMetrics'
 
 
 const Ending_wrapper = styled.div`
@@ -9,7 +10,7 @@ const Ending_wrapper = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 3rem;
+    
  
 
 
@@ -33,6 +34,7 @@ const Ending = () => {
     return (
         <div className='section' style={{backgroundColor: '#6698ff'}}>
             <div className="container">
+                
                 <Ending_wrapper>
                     <div className="textContainter">
                         <p className='preHeading'>REVOLUCIONA TU RECLUTAMIENTO</p>

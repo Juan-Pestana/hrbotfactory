@@ -33,7 +33,7 @@ const Metrics = () => {
                             <VisibilitySensor onChange={start} delayedCall>
                                 <span style={{fontSize:'50px', lineHeight: '1em', marginTop: '15px', marginBottom: '0px'}} ref={countUpRef} />
                             </VisibilitySensor>
-        )}
+                        )}
                         </CountUp>
                         <p style={{textAlign:'center'}}>Valoración de la experiencia del candidato</p>
                     </div>
@@ -44,7 +44,7 @@ const Metrics = () => {
                             <VisibilitySensor onChange={start} delayedCall>
                                 <span style={{fontSize:'50px', lineHeight: '1em', marginTop: '15px', marginBottom: '0px'}} ref={countUpRef} />
                             </VisibilitySensor>
-        )}
+                            )}
                         </CountUp>
                         <p style={{textAlign:'center'}}>Optimización de tiempos de preselección</p>
                     </div>
@@ -55,7 +55,7 @@ const Metrics = () => {
                             <VisibilitySensor onChange={start} delayedCall>
                                 <span style={{fontSize:'50px', lineHeight: '1em', marginTop: '15px', marginBottom: '0px'}} ref={countUpRef} />
                             </VisibilitySensor>
-        )}
+                            )}
                         </CountUp>
                         <p style={{textAlign:'center'}}>Recucción de tiempos de cobertura</p>
                     </div>
@@ -66,7 +66,7 @@ const Metrics = () => {
                             <VisibilitySensor onChange={start} delayedCall>
                                 <span style={{fontSize:'50px', lineHeight: '1em', marginTop: '15px', marginBottom: '0px'}} ref={countUpRef} />
                             </VisibilitySensor>
-        )}
+                            )}
                         </CountUp>
                         <p style={{textAlign:'center'}}>Mejora del proceso total de selección   </p>
                     </div>

@@ -7,9 +7,9 @@ import {Button} from './ui/Button'
 
 const Soluc2 = styled.div`
  display: flex;
- margin-top: 7rem;
+ margin-top: 5rem;
  color: var(--text-secondary-2);
- margin-bottom: 10rem;
+ margin-bottom: 5rem;
  justify-content: space-around;
  position: relative;
 
@@ -35,10 +35,10 @@ const Soluc2 = styled.div`
         color: #4d4d4d;
         
         .line{
-            border-bottom: 2px solid #d4d4d4;
+            border-bottom: 2px solid var(--bgr-primary-1);
             width: 120%;
-            margin-bottom: 2rem;
-            z-index: 5;
+            margin: 2rem 0rem 2rem 0rem;
+            
             
         }
         .titleWraper{
@@ -101,11 +101,12 @@ const Soluc2 = styled.div`
                 -8px -8px 8px #ffff,
                 5px 5px 10px #4d4d4d;
              
-            z-index: 3;
+            z-index: 9;
             border: none;
             outline: none;
             transition: all .2s ease-in;
             cursor: pointer;
+            
             svg{
                 
                 font-size: 30px;
@@ -155,6 +156,7 @@ const Soluc2 = styled.div`
     @media (max-width: 900px){
         display: block;
         padding: 1rem 1rem;
+        margin-top: 3rem;
 
         .buttonsGrid{
             max-width: 400px;
@@ -166,8 +168,13 @@ const Soluc2 = styled.div`
             padding: 0;
             width: 100%;
             margin-bottom: 3rem;
+            
+            .line{
+            margin: 5rem 0rem 2rem 0rem;
+        }
              
         }
+        
     }
 
 
@@ -176,12 +183,7 @@ const Soluc2 = styled.div`
 const Soluciones2 = () => {
 
     const [textShow, setTextShow] = useState('recruitment')
-    // const [carajo, setCarajo] = useState('coño')
 
-    // useEffect (() => {
-    //    setCarajo(renderTitle(textShow)) 
-        
-    // }, [textShow])
 
 
     
