@@ -121,7 +121,7 @@ const Navig = styled.div`
 
 
 
-  @media (max-width: 800px){
+  @media (max-width: 1000px){
     justify-content: center;
 
     .imgWhite{
@@ -174,21 +174,21 @@ const SideMenu = styled.div`
         }
       }
 
-  }
+      
 
-  .lang-select{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        div{
-          margin: 1rem;
+    }
+    .langButtons{
+        text-align: center;
+        a{
+          display: inline-block;
+          padding: 1rem 1rem;
           span{
-            font-size: 20px
+            font-size: 1em;
           }
         }
-         
       }
+
+
 `;
 
 const DarkBg = styled.div`
@@ -221,7 +221,7 @@ const Social =styled.div`
       
     }
     
-    @media (max-width: 800px){
+    @media (max-width: 1000px){
     background-color: #fff;
     height: fit-content;
     ul{
@@ -317,16 +317,8 @@ const Header = ({ siteTitle, logos }) => {
       </ul>
 
       
-      <div >
-        {/* <a href='#' value='es' onclick={(e)=>{
-          e.preventDefault()
-          changeLanguage(e.target.value)}  }><span role='img' aria-label='spanish flag'>🇪🇸</span></a>
-        <a href='#' value='en' onclick={(e)=>{
-          e.preventDefault()
-          changeLanguage(e.target.value)}  }><span role='img' aria-label='spanish flag'>🇬🇧 </span></a> */}
-         <ul >
-        
-          <li >
+      <div  className='langButtons'>
+ 
             <a
               href="#"
               onClick={(e) => {
@@ -335,21 +327,18 @@ const Header = ({ siteTitle, logos }) => {
               }}>
                 <span role='img' aria-label='spanish flag'>🇪🇸</span>
             </a>
-          </li>
-          <li >
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              changeLanguage('en');
-            }}>
-              <span role='img' aria-label='spanish flag'>🇬🇧 </span>
-          </a>
-        </li>
-        
-      </ul>
           
-      </div> 
+          
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                changeLanguage('en');
+              }}>
+                <span role='img' aria-label='spanish flag'>🇬🇧 </span>
+            </a>
+       </div> 
+      
                     
       
     </SideMenu>

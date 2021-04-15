@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 import { Button} from './ui/Button'
 
-const LePhone = styled.div`
+const ObPhone = styled.div`
     display: flex;
     justify-content: space-around;
     padding-top: 2rem;
@@ -53,10 +53,10 @@ const LePhone = styled.div`
 `;
 
 
-const LdePhone = () => {
+const OnboardPhone = () => {
 
     const data = useStaticQuery(graphql`
-    query LdePhone {
+    query OnboarPhone {
         image: file(relativePath: {eq: "emergiaPhone.png"}) {
         childImageSharp {
             fluid(maxWidth: 400) {
@@ -79,17 +79,17 @@ const LdePhone = () => {
         <div className= 'section' >
             <div className="container" style={{marginTop: '3rem'}}>
              
-                <LePhone>
+                <ObPhone>
                     
                         <div className= 'textContainer'>
                             
                                 <p className= 'preHeading' data-aos="fade-right" data-aos-offset="0" data-aos-delay="50">
-                                revoluciona tu reclutamiento
+                                revoluciona tu Onboarding
                                     
                                 </p>
-                                <h1 data-aos="fade-right" data-aos-offset="0" data-aos-delay="500">Responde a las consultas de tus empleados e integra sus solicitudes</h1>
-                                <p data-aos="fade-right" data-aos-offset="0" data-aos-delay="1000">Todo lo que tus empleados deséan conocer en un solo lugar, cercano y accesible 24/7</p>
-                                <p data-aos="fade-right" data-aos-offset="0" data-aos-delay="1500">Reune las solicitudes, tramites y documentos en una plataforma de ticketing dedicada e intégrala con tu software de nómina. </p>
+                                <h1 data-aos="fade-right" data-aos-offset="0" data-aos-delay="500">Garantiza el Onboarding de las nuevas incorporaciones, allí donde se encuentren.</h1>
+                                <p data-aos="fade-right" data-aos-offset="0" data-aos-delay="1000">Define los momentos clave y atomatiza su gestión, asegúrate de que el talento recién llegado cuenta con toda la información disponible y todo lo necesario.</p>
+                                <p data-aos="fade-right" data-aos-offset="0" data-aos-delay="1500">Enamórales, haciendo que se sientan siempre acompañados</p>
                             
                             <Button marginl={true} data-aos="zoom-in" data-aos-offset="0" data-aos-delay="1500">Solicita una demo</Button>
                         </div>
@@ -104,7 +104,7 @@ const LdePhone = () => {
                    
                     
                     
-                </LePhone>
+                </ObPhone>
                 
             </div>
             
@@ -116,4 +116,4 @@ const LdePhone = () => {
     )
 }
 
-export default LdePhone
+export default OnboardPhone

@@ -12,7 +12,7 @@ const Card = styled.div`
         background-color: #f2f2f2;
         height: 400px;
         border-radius: 10px;
-        overflow: hidden;
+        overflow:hidden;
         transition: all .3s ease-in-out;
         box-shadow: 5px 5px 5px rgba(0,0,0, 0.5);
 
@@ -23,19 +23,21 @@ const Card = styled.div`
         }
     }
     .card-img{
-        height: 80%;
+        height: 100%;
+        overflow: hidden;
         background-color: #ffff;
         object-fit: cover;
+        
 
-        .image{
-            height:100%;
-            
-            
-        }
+        
+    }
+    .image{
+        height: 100%
     }
     .card-info{
-        padding:  .8rem;
+        padding:  .5rem;
         color: #4d4d4d;
+        
         min-height: 135px;
 
         h3{

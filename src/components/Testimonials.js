@@ -41,6 +41,24 @@ const TestimonialStyles = styled.div`
             padding: 15px;
         }
     }
+  
+  @media(max-width:800px){
+
+    svg{
+      position: absolute;
+      font-size: 100px;
+      transform: rotate(-10deg);
+      color: #0050f5;
+      opacity: 0.2;
+      left: 65%;
+      top: 60px;
+    }
+    .testimonialWrapper{
+      margin: 0rem 1rem;
+    }
+      
+    
+  }
 `;
 
 
@@ -49,7 +67,7 @@ export default class Testimonials extends Component {
   render() {
     const settings = {
      
-      dots: false,
+      dots: true,
       focusOnSelect: false,
       infinite: true,
       autoplay: false,

@@ -148,7 +148,7 @@ h1{
 /* media Querys */
 
 
-@media (max-width: 1200px){
+@media (max-width: 1000px){
   .navBar{
     background-color: #fff;
     box-shadow: none;
