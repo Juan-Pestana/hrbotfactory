@@ -12,10 +12,12 @@ const ContactForm = styled.div`
 display:flex;
 align-items: center;
 justify-content: space-between;
+flex-wrap: wrap-reverse;
 
 .image-container{
   width: 50%;
   padding: 4rem;
+  min-width: 400px;
 }
   
 .contact-form {
@@ -23,8 +25,7 @@ justify-content: space-between;
   border-radius: 0.25rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s linear;
-  width: 90vw;
-  max-width: 30rem;
+  width: 40%;
   margin-right: 3rem;
 
 }
@@ -94,6 +95,18 @@ justify-content: space-between;
   
 }
 
+@media(max-width: 800px){
+  .image-container{
+    width: 90vw;
+    margin: 3rem auto;
+    padding: 1rem;
+  }
+  .contact-form{
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+
 `;
 
 const Contact = () => {
@@ -114,10 +127,10 @@ const image= data.image
 
   return(
     <Layout>
-    <SEO title='Blog hr bot factory'/>
+    <SEO title='Contacta con nosotros'/>
     <div className='section' style={{margin: '50px 0 50px 0'}}>
       <div className="container" style={{textAlign: 'center'}}>
-        <div style={{color: '#4d4d4d', maxWidth: '600px', margin:'auto'}}>
+        <div style={{color: '#4d4d4d', maxWidth: '600px', margin:'2rem auto 4rem auto'}}>
           <p className='preHeading'>Quieres saber más</p>
           <h1 >Solicita una demo y descubre en todo lo que te podemos ayudar</h1>
         </div>

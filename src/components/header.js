@@ -204,7 +204,7 @@ const DarkBg = styled.div`
 `;
 
 const Social =styled.div`
-    width: 100%;
+    width: 100vw;
     display:flex;
     padding: 0px;
     justify-content: flex-end;
@@ -243,7 +243,7 @@ const Header = ({ siteTitle, logos }) => {
  
   const [isOpen, setIsOpen] =useState(false)
   const { t } = useTranslation()
-  const {changeLanguage, language, languages} = useI18next()
+  const {changeLanguage, language} = useI18next()
 
   const handleChange = e =>{
   
@@ -288,7 +288,7 @@ const Header = ({ siteTitle, logos }) => {
           <li><Link to="/#nosotros" ><span>{t("nosotros")}</span></Link> </li>
           <li><Link to='/contact'>{t("solicita una demo")}</Link>  </li>
           <li><a href="https://platform.hrbotfactory.com/" target='_blank'> <Trans>acceso a clientes</Trans> </a></li>
-          <Link to='/blog'><li onClick={toggleSideMenu}>Blog</li></Link>
+          <li><Link to='/blog'>blog</Link> </li>
           
           <li style={{position: 'relative'}}>
             <div className="box">

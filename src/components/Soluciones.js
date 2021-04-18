@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 import { Link, Trans} from 'gatsby-plugin-react-i18next'
-import {Button} from '../components/ui/Button'
+import {Button, LinkButton} from '../components/ui/Button'
 import Img from 'gatsby-image'
 import {useStaticQuery} from 'gatsby'
 
@@ -44,7 +44,38 @@ const SolutionsTabs = styled.div`
  
         padding: 3rem 0rem;
         color: var(--txt-primary);
-        width: 40%
+        width: 40%;
+
+        .linkButton{
+            position: relative;
+            font-size: 16px;
+            margin-top: 1rem;
+            background-color: #6698FF ;
+            color:  #f2f2f2;
+            font-weight: 600;
+            text-align: center;
+            padding: 12px 40px;
+        
+            display: inline-block;
+            border-radius: 15px;
+            box-shadow: 2px 2px 5px #808080;
+            outline:none;
+            cursor: pointer;
+            margin-left: 190px;
+            border: none;
+            transition: all 0.3s ease-in;
+
+            :hover{
+                background-color:  #175fff;
+                transform: scale(1.05);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                
+            }
+
+            /* @media(max-width: 800px){
+                margin-left: 0;
+            } */
+        }
 
     }
     .imageContainer{
@@ -182,9 +213,9 @@ const images = [...data.soluciones.nodes]
                             <p>
                                 <Trans>Planifica tus vídeo entrevistas online o asíncronas gracias a nuestra plataforma y deja que nuestros chatbots den feedback a tus candidatos.</Trans>
                             </p>
-                            <Link to='/recruitment'>                             
-                                <Button marginl={true}><Trans>saber mas</Trans></Button>                
-                            </Link>
+                                                       
+                                <Link to='/recruitment' className='linkButton' > más información</Link>                
+                            
                             
                             </div>
                         <div className='imageContainer' style={{transform: `translateX(${offset * 0.2}px)`}}>
@@ -208,9 +239,7 @@ const images = [...data.soluciones.nodes]
                                 <Trans>Evalúa su adaptación al puesto gracias a nuestros asistentes virtuales.</Trans>
                             
                             </p>
-                            <Link to='/onboarding'>                             
-                                <Button marginl={true}><Trans>saber mas</Trans></Button>                
-                            </Link>
+                                <LinkButton to='/onboarding' marginl={true}><Trans>saber mas</Trans></LinkButton> 
                         </div>
                         <div className='imageContainer' style={{transform: `translateX(${offset * 0.2}px)`}}>
                             <Img fluid={images[1].childImageSharp.fluid}/>
@@ -234,9 +263,7 @@ const images = [...data.soluciones.nodes]
                             <Trans>Gracias al procesamiento de lenguaje natural, el asistente virtual interpreta las preguntas de los empleados proporcionando la respuesta más idónea.</Trans>
                            
                             </p>
-                            <Link to='/lineadeempleado'>                             
-                                <Button marginl={true}><Trans>saber mas</Trans></Button>                
-                            </Link>
+                                <LinkButton to='/lineadeempleado' marginl={true}><Trans>saber mas</Trans></LinkButton> 
                         </div>
                         <div className='imageContainer' style={{transform: `translateX(${offset * 0.2}px)`}}>
                             <Img fluid={images[2].childImageSharp.fluid}/>
@@ -259,9 +286,7 @@ const images = [...data.soluciones.nodes]
                             <Trans>Recoge la información de tus encuestas de clima de una forma ágil, ordenada y simple gracias a nuestra plataforma.</Trans>
                             
                             </p>
-                            <Link to='/feedback'>                             
-                                <Button marginl={true}><Trans>saber mas</Trans></Button>                
-                            </Link>
+                                <LinkButton to='/feedback' marginl={true}><Trans>saber mas</Trans></LinkButton> 
                         </div>
                         <div className='imageContainer' style={{transform: `translateX(${offset * 0.2}px)`}}>
                             <Img fluid={images[3].childImageSharp.fluid}/>
@@ -284,21 +309,19 @@ const images = [...data.soluciones.nodes]
                             <Trans>Impacta en tus empleados incluso en el momento de abandonar tu compañía.</Trans>
                             
                             </p>
-                            <Link to='/exitInterview'>                             
-                                <Button marginl={true}><Trans>saber mas</Trans></Button>                
-                            </Link>
+                                <LinkButton to='/exitInterview' marginl={true}><Trans>saber mas</Trans></LinkButton> 
                         </div>
                         <div className='imageContainer'style={{transform: `translateX(${offset * 0.2}px)`}}>
                             <Img fluid={images[4].childImageSharp.fluid}/>
                         </div>
                     </div>
                 </div>
-                <ul className= 'tabs' >
-                    <button className="tab" onClick={()=>setShow(0)} style={show === 0 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} data-aos="fade-right" data-aos-offset="0" data-aos-delay="1000">Recruitment  </button>
-                    <button className="tab" onClick={()=>setShow(1)} style={show === 1 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} data-aos="fade-right" data-aos-offset="0" data-aos-delay="750">onboarding  </button>
-                    <button className="tab" onClick={()=>setShow(2)} style={show === 2 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} data-aos="fade-right" data-aos-offset="0" data-aos-delay="500"><Trans>línea de empleado</Trans></button>
-                    <button className="tab" onClick={()=>setShow(3)} style={show === 3 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} data-aos="fade-right" data-aos-offset="0" data-aos-delay="250">feedback</button>
-                    <button className="tab" onClick={()=>setShow(4)} style={show === 4 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} data-aos="fade-right" data-aos-offset="0" data-aos-delay="0">exit interview</button>     
+                <ul className= 'tabs' data-aos="fade-right" data-aos-offset="0" data-aos-delay="250">
+                    <button className="tab" onClick={()=>setShow(0)} style={show === 0 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} >Recruitment  </button>
+                    <button className="tab" onClick={()=>setShow(1)} style={show === 1 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} >onboarding  </button>
+                    <button className="tab" onClick={()=>setShow(2)} style={show === 2 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} ><Trans>línea de empleado</Trans></button>
+                    <button className="tab" onClick={()=>setShow(3)} style={show === 3 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} >feedback</button>
+                    <button className="tab" onClick={()=>setShow(4)} style={show === 4 ? {backgroundColor: "rgb(102, 152, 255)", color: "rgb(255, 255, 255)" }: null} >exit interview</button>     
                 </ul>
             </SolutionsTabs>
             
