@@ -85,6 +85,10 @@ const Soluc2 = styled.div`
             "third forth fifth";
         grid-gap: 15px;
         
+        div{
+            width: 33.33%;
+            aspect-ratio: 1 / 1;
+        }
     
         button{
             
@@ -92,6 +96,8 @@ const Soluc2 = styled.div`
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
+            
+           
             font-weight: 600;
             border-radius: 20%;
             background-color: #f2f2f2;
@@ -161,7 +167,7 @@ const Soluc2 = styled.div`
         .buttonsGrid{
             max-width: 400px;
             width: 90vw;
-            height: 210px;
+            aspect-ratio: 15 / 10;
         }
       
         .textContainer{
@@ -194,9 +200,14 @@ const Soluciones2 = () => {
     return (
         <div className= 'section' style={{backgroundColor: '#f2f2f2', position: 'relative'}}>
             <div className= 'container'>
+                <div style={{margin:'auto', maxWidth: '600px', padding: '1rem', textAlign:'center'}}>
+                    <p className = 'preHeading'>siempre en contacto</p>
+                    <h1>Acompaña a tus empleados en todo momento y atiende a sus necesidades</h1>
+                </div>
+            
                 <Soluc2>
                     <div className= 'textContainer'>
-                        <p className = 'preHeading'>conoce nuestras soluciones</p>
+                        
                         <div className='titleWraper'>
                             <h1 className={textShow === 'recruitment'? 'active' : null}>Integra la IA en la criba de tus posiciones</h1>
                             <h1 className={textShow === 'lde'? 'active' : null}>Todas las respuestas a tus empleados en cada momento</h1>

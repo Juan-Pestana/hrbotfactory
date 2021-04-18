@@ -72,7 +72,7 @@ const RecruitNds = styled.div`
 
             div:first-child>div{
             margin-top: 0px;
-            background-color: #ff5d22;
+           
              }
             div:nth-child(2)>div{
             margin-top: 0px;

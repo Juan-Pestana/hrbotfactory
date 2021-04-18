@@ -46,6 +46,17 @@ const Data = styled.div`
         }
     }
 
+    @media(max-width: 800px){
+        flex-direction: column;
+        padding: 1rem;
+        align-items: center;
+        margin: 3rem 0;
+
+        .each-data{
+            margin: 2rem 0
+        }
+    }
+
 
 `;
 

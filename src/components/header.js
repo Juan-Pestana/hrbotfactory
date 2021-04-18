@@ -169,8 +169,10 @@ const SideMenu = styled.div`
         color: #fff;
         transition: all 400ms ease-out;
         :hover{
+          
           background-color: #f2f2f2;
-          color: #4d4d4d
+          color: #4d4d4d;
+
         }
       }
 
@@ -279,8 +281,9 @@ const Header = ({ siteTitle, logos }) => {
           
         </div>
         <ul className= "desktop-nav">
-          <li>
-            <Link to="/#products" ><span>{t("soluciones")}</span></Link> 
+          <li style={{backgroundColor:'#6698ff'}}>
+            <Dropdown isSide={false}/>
+            {/* <Link to="/#products" ><span>{t("soluciones")}</span></Link>  */}
           </li>
           <li><Link to="/#nosotros" ><span>{t("nosotros")}</span></Link> </li>
           <li><Link to='/contact'>{t("solicita una demo")}</Link>  </li>
@@ -307,7 +310,7 @@ const Header = ({ siteTitle, logos }) => {
     </div>
     <SideMenu style={isOpen ? {transform: 'translatex(250px)'} : null}>
       <ul>
-        <Link to="/#products" title='productos'><li onClick={toggleSideMenu}><Trans>soluciones</Trans> </li></Link>
+        <Dropdown isSide={true}/>
         <Link to="/#nosotros" title='nosotros'><li onClick={toggleSideMenu}><Trans>nosotros</Trans> </li></Link>
         <Link to='/contact'><li onClick={toggleSideMenu}><Trans>solicita una demo</Trans></li></Link>
         <Link to='/blog'><li onClick={toggleSideMenu}>Blog</li></Link>

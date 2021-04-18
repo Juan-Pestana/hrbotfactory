@@ -182,8 +182,8 @@ const images = [...data.soluciones.nodes]
                             <p>
                                 <Trans>Planifica tus vídeo entrevistas online o asíncronas gracias a nuestra plataforma y deja que nuestros chatbots den feedback a tus candidatos.</Trans>
                             </p>
-                            <Link to='/recruitment'>
-                                <Button marginl={true}><Trans>solicita una demo</Trans></Button>
+                            <Link to='/recruitment'>                             
+                                <Button marginl={true}><Trans>saber mas</Trans></Button>                
                             </Link>
                             
                             </div>
@@ -208,7 +208,9 @@ const images = [...data.soluciones.nodes]
                                 <Trans>Evalúa su adaptación al puesto gracias a nuestros asistentes virtuales.</Trans>
                             
                             </p>
-                            <Button marginl= {true}><Trans>solicita una demo</Trans></Button>
+                            <Link to='/onboarding'>                             
+                                <Button marginl={true}><Trans>saber mas</Trans></Button>                
+                            </Link>
                         </div>
                         <div className='imageContainer' style={{transform: `translateX(${offset * 0.2}px)`}}>
                             <Img fluid={images[1].childImageSharp.fluid}/>
@@ -232,7 +234,9 @@ const images = [...data.soluciones.nodes]
                             <Trans>Gracias al procesamiento de lenguaje natural, el asistente virtual interpreta las preguntas de los empleados proporcionando la respuesta más idónea.</Trans>
                            
                             </p>
-                            <Button marginl= {true}><Trans>solicita una demo</Trans></Button>
+                            <Link to='/lineadeempleado'>                             
+                                <Button marginl={true}><Trans>saber mas</Trans></Button>                
+                            </Link>
                         </div>
                         <div className='imageContainer' style={{transform: `translateX(${offset * 0.2}px)`}}>
                             <Img fluid={images[2].childImageSharp.fluid}/>
@@ -255,7 +259,9 @@ const images = [...data.soluciones.nodes]
                             <Trans>Recoge la información de tus encuestas de clima de una forma ágil, ordenada y simple gracias a nuestra plataforma.</Trans>
                             
                             </p>
-                            <Button marginl={true}><Trans>solicita una demo</Trans></Button>
+                            <Link to='/feedback'>                             
+                                <Button marginl={true}><Trans>saber mas</Trans></Button>                
+                            </Link>
                         </div>
                         <div className='imageContainer' style={{transform: `translateX(${offset * 0.2}px)`}}>
                             <Img fluid={images[3].childImageSharp.fluid}/>
@@ -278,7 +284,9 @@ const images = [...data.soluciones.nodes]
                             <Trans>Impacta en tus empleados incluso en el momento de abandonar tu compañía.</Trans>
                             
                             </p>
-                            <Link to='/contact'><Button marginl= {"true"}><Trans>solicita una demo</Trans></Button></Link>
+                            <Link to='/exitInterview'>                             
+                                <Button marginl={true}><Trans>saber mas</Trans></Button>                
+                            </Link>
                         </div>
                         <div className='imageContainer'style={{transform: `translateX(${offset * 0.2}px)`}}>
                             <Img fluid={images[4].childImageSharp.fluid}/>

@@ -46,7 +46,7 @@ const FeatComp = styled.div`
 
     }
 
-    @media(max-width: 700px){
+    @media(max-width: 800px){
 
         flex-direction: column;
         align-items: center;
@@ -61,7 +61,7 @@ const FeatComp = styled.div`
             }
         }
         .imageContainer{
-            width:85%;
+            width:55%;
         }
     }
 
@@ -96,7 +96,7 @@ const Features = () => {
         
         <div className= 'section' style={{backgroundColor:"#f2f2f2"}}>
             <div className="container" style={{margin: '5rem 0rem'}}>
-                <div style={{margin: 'auto',textAlign:'center', maxWidth: '500px'}}> 
+                <div style={{margin: 'auto',textAlign:'center', maxWidth: '500px', padding:'1rem'}}> 
                     <p className="preHeading" >Key features</p>
                     <h1 >Nuestros chatbots automatizan todo tu proceso de selección</h1>
                 </div>
