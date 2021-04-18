@@ -15,7 +15,7 @@ const SolutionsTabs = styled.div`
     width: 100%;
     .slideContainer{
         position: relative;
-        height: 550px;
+        height: 650px;
         overflow: hidden;
     }
     .product{
@@ -25,7 +25,7 @@ const SolutionsTabs = styled.div`
         flex-wrap: wrap;
         height: 100%;
         width: 100%;
-        top: -550px ;
+        top: -650px ;
         left:0;
         background-size: cover;
         background-position: center;
@@ -35,7 +35,7 @@ const SolutionsTabs = styled.div`
         
     }
     .product.selected {
-        transform: translateY(550px);
+        transform: translateY(650px);
         opacity:1;
         
     }
@@ -100,7 +100,7 @@ const SolutionsTabs = styled.div`
 
     .imageContainer{
         width: 50%;
-        height: 100%;
+        margin-top: auto;
     }
  
 
@@ -174,7 +174,7 @@ const images = [...data.soluciones.nodes]
                                 <Trans>revoluciona tu reclutamiento</Trans>
                             </p>
                             <h1>
-                                <Trans>Todo tu proceso de selección online gracias a nuestros chatbots y videoentrevistas</Trans>
+                                <Trans>Todo tu proceso de selección online con nuestros chatbots </Trans>
                             </h1>
                             <p>
                                 <Trans>Mejora la experiencia del candidato incorporando un asistente virtual que entreviste y evalúe a los candidatos con el mismo rigor.</Trans>
