@@ -23,7 +23,7 @@ const SolutionsTabs = styled.div`
         display: flex !important;
         justify-content: space-around;
         flex-wrap: wrap;
-        height: 100%;
+        height: 70vh;
         width: 100%;
         top: -650px ;
         left:0;
@@ -35,7 +35,7 @@ const SolutionsTabs = styled.div`
         
     }
     .product.selected {
-        transform: translateY(80vh);
+        transform: translateY(75vh);
         opacity:1;
         
     }

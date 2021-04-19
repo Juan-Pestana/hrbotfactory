@@ -58,13 +58,15 @@ const FooterStyle = styled.div`
 `;
 
 const Footer = ({logos}) => {
+
+    const FootImage = logos.find(logo => logo.name === 'principal-blanco-2')
     return (
         <footer>
             <div className="section" style={{backgroundColor: '#6698ff'}}>
                 <div className="container">
                     <FooterStyle style={{display: 'flex'}}>
                         <div className='imgWhite'>
-                            <Img  fluid={logos[1].childImageSharp.fluid} alt="logo blanco hr bot factory"/>
+                            <Img  fluid={FootImage.childImageSharp.fluid} alt="logo blanco hr bot factory"/>
                         </div>
                         <p>Todos los derechos reservados hr bot factory.</p>
                         <ul >
