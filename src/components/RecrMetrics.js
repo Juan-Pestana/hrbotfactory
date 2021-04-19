@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Label} from './ui/Label'
+
 import CountUp from 'react-countup'
 import VisibilitySensor from 'react-visibility-sensor'
 
@@ -53,7 +53,7 @@ const Data = styled.div`
         margin: 3rem 0;
 
         .each-data{
-            margin: 2rem 0
+            margin: 2rem 1rem;
         }
     }
 

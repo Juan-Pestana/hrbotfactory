@@ -29,9 +29,7 @@ const RecPhone = styled.div`
     }
 
 
-
-        
-    
+  
     .textContainer{
         width: 100%;
         margin-top: 4rem;
@@ -87,7 +85,8 @@ const RecruitPhone = () => {
 
     const images = [...data.images.nodes]
 
-
+ const imageFondo = images.find(image => image.name === 'fondo-de-caracteristicas')
+ const imageTop = images.find(image => image.name === 'engagement')
 
 
     return (
@@ -115,9 +114,9 @@ const RecruitPhone = () => {
                     
                         <div className='imageContainer' data-aos="fade-left" data-aos-offset="0">
                             
-                                <Img fluid={images[3].childImageSharp.fluid}/>
+                                <Img fluid={imageFondo.childImageSharp.fluid}/>
                                 <div className= 'innerImage'>
-                                <Img fluid={images[1].childImageSharp.fluid} />
+                                <Img fluid={imageTop.childImageSharp.fluid} />
                                 </div>
                             
                             

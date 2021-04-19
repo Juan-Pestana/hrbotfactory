@@ -15,7 +15,7 @@ const SolutionsTabs = styled.div`
     width: 100%;
     .slideContainer{
         position: relative;
-        height: 650px;
+        height: 70vh;
         overflow: hidden;
     }
     .product{
@@ -35,14 +35,14 @@ const SolutionsTabs = styled.div`
         
     }
     .product.selected {
-        transform: translateY(650px);
+        transform: translateY(80vh);
         opacity:1;
         
     }
 
     .textContainer{
  
-        padding: 3rem 0rem;
+        padding: 5rem 0rem 3rem 0rem;
         color: var(--txt-primary);
         width: 40%;
 
@@ -51,7 +51,7 @@ const SolutionsTabs = styled.div`
 
     .imageContainer{
         margin-top: auto;
-        height: 90%;
+      
         width: 37%;
         min-width: 300px;
         max-width: 500px;
@@ -95,19 +95,20 @@ const SolutionsTabs = styled.div`
 
     @media (max-width: 800px){
 
-    .slideContainer{
+    /* .slideContainer{
         height: 750px;
         
-    }
+    } */
 
     .imageContainer{
-        width: 50%;
+        display: none;
+        /* width: 50%;
         margin-top: auto;
         padding: 0 2rem;
         
         .image{
             width: 80%;
-        }
+        } */
     }
  
 
