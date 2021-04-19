@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Button} from '../components/ui/Button'
+import {LinkButton} from '../components/ui/Button'
 import RecrMetrics from '../components/RecrMetrics'
 
 
@@ -41,7 +41,7 @@ const Ending = () => {
                         <h1>Todo tu proceso de selección online gracias a nuestros chatbots y videoentrevistas</h1>
                     </div>
                     
-                    <Button secondary={true}>Solicita una demo</Button>
+                    <LinkButton to='/contact' secondary={true}>Solicita una demo</LinkButton>
 
                 </Ending_wrapper>
                 

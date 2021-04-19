@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 export const Button = styled.button`
     
-    position: relative;
+ 
     font-size: 16px;
     margin-top: 1rem;
     background-color: ${props => props.secondary? '#f2f2f2'  : '#6698FF ' };
@@ -36,7 +36,7 @@ export const Button = styled.button`
 
 export const LinkButton = styled(props => <Link {...props} />)`
     
-    position: relative;
+  
     font-size: 16px;
     margin-top: 1rem;
     background-color: ${props => props.secondary? '#f2f2f2'  : '#6698FF ' };
@@ -44,7 +44,7 @@ export const LinkButton = styled(props => <Link {...props} />)`
     font-weight: 600;
     text-align: center;
     padding: 12px 40px;
-   
+    position: relative;
     display: inline-block;
     border-radius: 15px;
     box-shadow: 2px 2px 5px #808080;

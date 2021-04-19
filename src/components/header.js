@@ -1,11 +1,9 @@
 import React, {useState} from "react"
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import {graphql} from 'gatsby'
 import {useTranslation, useI18next, Link, Trans} from 'gatsby-plugin-react-i18next'
 import Dropdown from './ui/Dropdown'
-//import { Link } from "gatsby"
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 
@@ -153,10 +151,10 @@ const SideMenu = styled.div`
        padding-left: 0;
        color: #ffff;
        font-size: 18px;
-      display: flex;
-      flex-direction: column;
-      height: 300px;
-      justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        justify-content: space-between;
 
       li{
         display: block;
@@ -254,6 +252,11 @@ const Header = ({ siteTitle, logos }) => {
     setIsOpen(!isOpen)
   }
 
+  console.log(logos)
+
+  const logoBlue= logos.find(logo => logo.name === 'principal-azul-2')
+  const logoWhite= logos.find(logo => logo.name === 'principal-blanco-2')
+
   
   return(
     <>
@@ -271,12 +274,12 @@ const Header = ({ siteTitle, logos }) => {
       <Navig>
         <div>
           <Link to="/" className='imgWhite'>
-            <Img  fluid={logos[1].childImageSharp.fluid} alt="logo blanco hr bot factory"/>
+            <Img  fluid={logoWhite.childImageSharp.fluid} alt="logo blanco hr bot factory"/>
           </Link>
             
           
           <Link to="/"className="imgBlue">
-            <Img fluid={logos[0].childImageSharp.fluid} alt="logo azul hr bot factory"/>
+            <Img fluid={logoBlue.childImageSharp.fluid} alt="logo azul hr bot factory"/>
           </Link>
           
         </div>
@@ -316,11 +319,7 @@ const Header = ({ siteTitle, logos }) => {
         <Link to='/blog'><li onClick={toggleSideMenu}>Blog</li></Link>
         <a href="https://platform.hrbotfactory.com/" target='_blank' ></a><li onClick={toggleSideMenu}><Trans>acceso a clientes</Trans></li>
         {/* <li><Dropdown/></li> */}
-
-      </ul>
-
-      
-      <div  className='langButtons'>
+        <div  className='langButtons'>
  
             <a
               href="#"
@@ -340,7 +339,11 @@ const Header = ({ siteTitle, logos }) => {
               }}>
                 <span role='img' aria-label='spanish flag'>🇬🇧 </span>
             </a>
-       </div> 
+        </div> 
+      </ul>
+
+      
+      
       
                     
       
@@ -356,19 +359,7 @@ const Header = ({ siteTitle, logos }) => {
   )
 }
 
-// export const query = graphql`
-//   query($language: String!) {
-//     locales: allLocale(filter: {language: {eq: $language}}) {
-//       edges {
-//         node {
-//           ns
-//           data
-//           language
-//         }
-//       }
-//     }
-//   }
-// `;
+
 
 
 export default Header

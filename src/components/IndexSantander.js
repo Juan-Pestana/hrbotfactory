@@ -9,8 +9,8 @@ const ChatPlat = styled.div`
     display:flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    margin: 5rem 0rem;
+    justify-content: center;
+    margin: 10rem 0rem;
     overflow-y: visible;
 
     .imageWrap{
@@ -18,6 +18,7 @@ const ChatPlat = styled.div`
         position: relative;
         overflow-y: visible;
         min-width: 300px;
+        padding: 1rem;
         
 
         .phoneWrap{
@@ -39,17 +40,18 @@ const ChatPlat = styled.div`
 
     }
     .textWrap{
-        width: 40%;
+        width: 50%;
         font-size: 2em;
         color: #4d4d4d;
         min-width: 300px;
+        padding: 1rem;
         h1{
             margin: 21.44px 0;
         }
     }
 
     @media(max-width: 800px){
-        
+        margin: 5rem 0rem;
         .imageWrap{
             width: 90%;
             padding-bottom:  3rem;
@@ -60,7 +62,7 @@ const ChatPlat = styled.div`
         }
         .textWrap{
             width: 90%;
-            padding: 0rem 1rem;
+            padding: 4rem 1rem;
         }
     }
 

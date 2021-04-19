@@ -8,7 +8,7 @@ import {FaCheck} from 'react-icons/fa'
 const ObPlat = styled.div`
     display: flex;
   
-    margin-top: 6rem;
+    margin-top: 2rem;
     margin-bottom: 6rem;
     justify-content: space-around;
     flex-wrap: wrap;

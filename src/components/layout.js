@@ -22,6 +22,7 @@ const Layout = ({ children }) => {
       logos: allFile(filter: {relativeDirectory: {eq: "logos"}}){
         nodes{
           id
+          name
           childImageSharp{
             fluid(maxWidth: 290){
               ...GatsbyImageSharpFluid

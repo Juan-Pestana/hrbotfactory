@@ -83,11 +83,15 @@ function Dropdown({isSide}) {
 
     const [ddIsOpen, setDdIsOpen] = useState(false)
 
+    const toggleDd = () =>{
+        setDdIsOpen(!ddIsOpen)
+      }
+
 
 
     return (
         <DrpDwn isSide={isSide} ddIsOpen={ddIsOpen}>
-            <div className='ddbutton' onClick = {()=> setDdIsOpen(true)} >
+            <div className='ddbutton' onClick = {()=> toggleDd()} >
                 Soluciones
                 {ddIsOpen ? <FaAngleUp/> : <FaAngleDown/> }
 

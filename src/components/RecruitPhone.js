@@ -1,7 +1,7 @@
 import { useStaticQuery } from 'gatsby';
 import React from 'react'
 import styled from 'styled-components'
-import { Button} from './ui/Button'
+import { LinkButton} from './ui/Button'
 import Img from 'gatsby-image'
 
 
@@ -107,7 +107,7 @@ const RecruitPhone = () => {
                                 <p data-aos="fade-right" data-aos-offset="0" data-aos-delay="1000">Toda la información integrada en una plataforma específicamente diseñada para tus procesos y posiciones.</p>
                                 <p data-aos="fade-right" data-aos-offset="0" data-aos-delay="1500">Centra tus esfuerzos en aquellas partes del proceso que realmente aportan valor.</p>
                             
-                            <Button marginl={true} data-aos="zoom-in" data-aos-offset="0" data-aos-delay="1500">Solicita una demo</Button>
+                            <LinkButton  to='/contact' marginl={true} data-aos="zoom-in" data-aos-offset="0" data-aos-delay="1500">Solicita una demo</LinkButton>
                         </div>
 
                     

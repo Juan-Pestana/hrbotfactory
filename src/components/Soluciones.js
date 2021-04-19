@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
-import { Link, Trans} from 'gatsby-plugin-react-i18next'
-import {Button, LinkButton} from '../components/ui/Button'
+import {Trans} from 'gatsby-plugin-react-i18next'
+import { LinkButton} from '../components/ui/Button'
 import Img from 'gatsby-image'
 import {useStaticQuery} from 'gatsby'
 
@@ -46,38 +46,9 @@ const SolutionsTabs = styled.div`
         color: var(--txt-primary);
         width: 40%;
 
-        .linkButton{
-            position: relative;
-            font-size: 16px;
-            margin-top: 1rem;
-            background-color: #6698FF ;
-            color:  #f2f2f2;
-            font-weight: 600;
-            text-align: center;
-            padding: 12px 40px;
-        
-            display: inline-block;
-            border-radius: 15px;
-            box-shadow: 2px 2px 5px #808080;
-            outline:none;
-            cursor: pointer;
-            margin-left: 190px;
-            border: none;
-            transition: all 0.3s ease-in;
-
-            :hover{
-                background-color:  #175fff;
-                transform: scale(1.05);
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                
-            }
-
-            /* @media(max-width: 800px){
-                margin-left: 0;
-            } */
-        }
-
     }
+
+
     .imageContainer{
         margin-top: auto;
         height: 90%;
@@ -125,13 +96,18 @@ const SolutionsTabs = styled.div`
     @media (max-width: 800px){
 
     .slideContainer{
-        height: 800px;
+        height: 750px;
         
     }
 
     .imageContainer{
         width: 50%;
         margin-top: auto;
+        padding: 0 2rem;
+        
+        .image{
+            width: 80%;
+        }
     }
  
 
@@ -214,7 +190,7 @@ const images = [...data.soluciones.nodes]
                                 <Trans>Planifica tus vídeo entrevistas online o asíncronas gracias a nuestra plataforma y deja que nuestros chatbots den feedback a tus candidatos.</Trans>
                             </p>
                                                        
-                                <Link to='/recruitment' className='linkButton' > más información</Link>                
+                                <LinkButton to='/recruitment' className='linkButton' > más información</LinkButton>                
                             
                             
                             </div>
@@ -289,7 +265,7 @@ const images = [...data.soluciones.nodes]
                                 <LinkButton to='/feedback' marginl={true}><Trans>saber mas</Trans></LinkButton> 
                         </div>
                         <div className='imageContainer' style={{transform: `translateX(${offset * 0.2}px)`}}>
-                            <Img fluid={images[3].childImageSharp.fluid}/>
+                            <Img fluid={images[3].childImageSharp.fluid} />
                         </div>
                     </div>
                     <div className={`product ${show === 4 ? 'selected' : null}`} >
