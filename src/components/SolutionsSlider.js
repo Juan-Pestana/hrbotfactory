@@ -71,7 +71,7 @@ const SolutionsTabs = styled.div`
         display: flex !important;
         justify-content: space-around;
         flex-wrap: wrap;
-        height: 70vh;
+        height: 80vh;
         width: 100%;
 
  
@@ -100,7 +100,7 @@ const SolutionsTabs = styled.div`
         margin-top: auto;
         width: 50%;
         min-width: 300px;
-        max-width: 550px;
+        max-width: 600px;
     }
 
  

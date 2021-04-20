@@ -59,7 +59,7 @@ const images = [...data.soluciones.nodes]
         
         <Divider color='#ffff'/>
     </div>
-    <DividerBottom/>
+    <DividerBottom coloe='#f2f2f2'/>
   
         </>
     )
