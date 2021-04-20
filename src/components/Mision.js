@@ -2,12 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import {useStaticQuery} from 'gatsby'
 import Img from 'gatsby-image'
+import {Divider, DividerBottom} from './ui/divider'
 
 const Mision_wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 5rem 0rem;
  
 
 
@@ -226,9 +228,10 @@ const team = data.team
                 </ImageTeam>  
 
             </div> 
-                         
+            <Divider color='#6698ff'/>         
         </div>
-        <div style={{backgroundColor:'#6698ff', height: '100px'}}></div>
+        <DividerBottom color='#fff'/>
+       
         
 
         </>

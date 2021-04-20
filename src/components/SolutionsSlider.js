@@ -27,16 +27,43 @@ const SolutionsTabs = styled.div`
         margin: auto;
         right: 50%;
         bottom: -35px;
-        transform: translateX(50%)
+        transform: translateX(50%);
+        z-index: 10;
     }
+
+   
     .arrows{
         position: absolute;
         display:flex;
         width: 300px;
-        justify-content: space-around;
-        bottom: -35px;
+        justify-content: space-between;
+        bottom: -47px;
         left: 50%;
-        transform: translateX(50%);
+        transform: translateX(-50%);
+        z-index: 9;
+        
+        button{
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+           
+            :nth-of-type(1):hover{
+                svg{
+                    transform: translateX(-30px);
+                    color: var(--bgr-primary-1);
+                    
+                }
+            }
+            :nth-of-type(2):hover{
+                svg{
+                    transform: translateX(30px);
+                    color: var(--bgr-primary-1);
+                }
+            }
+            svg{
+                transition: all .3s ease-in-out;
+            }
+        }
     }
 
     .product{
@@ -113,6 +140,8 @@ const SolutionsTabs = styled.div`
 
 
 
+
+
 export default class SolutionSlider extends Component {
     constructor(props) {
         super(props);
@@ -125,6 +154,7 @@ export default class SolutionSlider extends Component {
       previous() {
         this.slider.slickPrev();
       }
+
       render() {
         const settings = {
           dots: true,
@@ -136,6 +166,7 @@ export default class SolutionSlider extends Component {
           speed: 1000,
           autoplaySpeed: 6000,
           pauseOnhover: true,
+
         };
 
 
@@ -145,7 +176,7 @@ export default class SolutionSlider extends Component {
       <SolutionsTabs>
           <div className="slideContainer" >
    
-                <Slider {...settings} >
+                <Slider ref={c => (this.slider = c)} {...settings} >
                     <div >
 
                         <div className='product' style={{backgroundColor:'#f2f2f2'}}>
@@ -300,7 +331,16 @@ export default class SolutionSlider extends Component {
                 
                     
                 </Slider>
+                <div className='arrows'>
+                    <button classname='button' onClick={this.previous}>
+                        <BsArrowLeft/>
+                    </button>
+                    <button onClick={this.next}>
+                        <BsArrowRight/>
+                    </button>
+                </div>
             </div>
+            
       </SolutionsTabs>
     );
   }

@@ -1,7 +1,7 @@
 import { useStaticQuery } from 'gatsby';
 import React from 'react'
 import styled from 'styled-components'
-import {Label} from './ui/Label'
+import {Divider, DividerBottom} from './ui/divider'
 import Img from 'gatsby-image'
 import {FaPencilAlt, FaHandHolding, FaQuestion, FaTv, FaUserCog, FaRocket} from 'react-icons/fa'
 
@@ -93,7 +93,7 @@ const Features = () => {
 
 
     return (
-        
+       <> 
         <div className= 'section' style={{backgroundColor:"#f2f2f2"}}>
             <div className="container" style={{margin: '5rem 0rem'}}>
                 <div style={{margin: 'auto',textAlign:'center', maxWidth: '500px', padding:'1rem'}}> 
@@ -145,8 +145,10 @@ const Features = () => {
                 </FeatComp>
                 
             </div>
+            {/* <Divider color='#6698ff'/> */}
         </div>
-            
+        {/* <DividerBottom color='#f2f2f2'/> */}
+    </>        
         
         
     )

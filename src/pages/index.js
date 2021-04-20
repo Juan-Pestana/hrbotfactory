@@ -4,10 +4,10 @@ import Soluciones from '../components/Soluciones'
 
 import NewSliderSection from '../components/NewSliderSection'
 import Mision from '../components/Mision'
-import FeaturedBlogs from '../components/FeaturedBlogs'
+
 import IndexSantander from '../components/IndexSantander'
 import IndexFeatures from '../components/IndexFeatures'
-
+import Ending from '../components/Ending'
 import Aos from 'aos'
 
 
@@ -30,9 +30,8 @@ const Recruitment = () => {
       <IndexSantander/>
       <IndexFeatures/>
       <NewSliderSection/>
-  
-      <FeaturedBlogs/>
       <Mision/>
+      <Ending/>
       
     
     

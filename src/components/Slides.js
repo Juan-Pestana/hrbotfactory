@@ -67,7 +67,7 @@ export default class CenterMode extends Component {
         
 
     return (
-      <div>
+      <div style={{padding: '6rem'}}>
        
         <Slider {...settings}>
           {images.map(image =>

@@ -1,7 +1,7 @@
 import React from 'react'
 import CenterMode from './Slides'
 import {useStaticQuery} from 'gatsby'
-import Testimonials from './Testimonials'
+import {Divider, DividerBottom} from './ui/divider'
 
 
 const NewSliderSection = () => {
@@ -25,17 +25,18 @@ const NewSliderSection = () => {
 
 
     return (
-        <div className='section' style={{backgroundColor: "#6698ff", flexDirection:'column'}}>
+      <>
+        <div className='section' style={{backgroundColor: "#6698ff", flexDirection:'column', padding:'4rem 0rem'}}>
             <div className='container' >
-                <p className="preHeading" style={{color: '#fff', paddingTop: '4rem', textAlign:'center'}}>confian en nosotros</p>
+                <p className="preHeading" style={{color: '#fff', textAlign:'center'}}>confian en nosotros</p>
                 <CenterMode data = {data}/>
             </div>
-            <div className='container'>
-                 <Testimonials/>
-            </div>
+
           
-            
+            {/* <Divider color= '#fff'/> */}
         </div>
+        {/* <DividerBottom color= '#6698ff'/> */}
+      </>
     )
 }
 
